@@ -5,13 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -32,4 +25,22 @@ body {
 
 .animate-slideDown {
   animation: slideDown 0.3s ease forwards;
+}
+
+/* Make navigation arrows red */
+.swiper-button-next,
+.swiper-button-prev {
+  color: red !important;
+  font-weight: bold;
+}
+
+/* Increase arrow size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 28px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: red !important;
 }

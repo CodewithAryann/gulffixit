@@ -37,19 +37,19 @@ export default function Hero() {
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/20 backdrop-blur-[0.5px]"></div>
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[0.5px]"></div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-start justify-center h-full max-w-6xl mx-auto px-6 text-left">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-white leading-tight drop-shadow-2xl">
-          Keeping Your Spaces <span className="text-red-500">Pristine</span>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-2xl">
+          Keeping Your Spaces <span className="text-red-600">Pristine</span>
           <br /> With Expert Maintenance Solutions
         </h1>
 
         <p className="text-lg md:text-xl text-white/90 max-w-2xl mt-4 leading-relaxed">
           We ensure your spaces are kept in top-notch condition with skilled technicians 
           ready to tackle any repair or maintenance task — <br />
-          <span className="text-red-500 font-semibold">anywhere, anytime in Dubai.</span>
+          <span className="text-red-600 font-semibold">anywhere, anytime in Dubai.</span>
         </p>
 
         <Link
