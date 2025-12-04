@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import HeroImage from "@/public/images/about/about.png";
+import HeroImage from "@/public/images/about/about-1.png";
 
 export default function AboutSection() {
   return (

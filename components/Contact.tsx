@@ -35,11 +35,31 @@ export default function ContactForm() {
     setIsSubmitting(true);
 
     try {
-      console.log("Form data:", formData);
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
-    } catch {
+      // Web3Forms endpoint
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "YOUR_WEB3FORMS_ACCESS_KEY", // Replace with your actual Web3Forms access key
+          subject: "New Contact Form Submission - Gulf Fixit",
+          from_name: formData.name,
+          from_email: formData.email,
+          phone: formData.phone,
+          service: formData.service,
+          message: formData.message,
+          redirect: "", // Optional: redirect after success
+        }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error(error);
       setSubmitStatus("error");
     } finally {
       setIsSubmitting(false);
@@ -66,12 +86,10 @@ export default function ContactForm() {
           </p>
         </motion.div>
 
-        {/* Form Container with WHITE GLOW BEHIND */}
+        {/* Form Container */}
         <div className="relative">
-          {/* White glow effect ONLY behind the form */}
           <div className="absolute inset-0 -z-10 bg-white/10 blur-3xl rounded-3xl transform scale-105"></div>
-          
-          {/* The actual form */}
+
           <motion.div
             className="bg-black/90 rounded-3xl p-8 md:p-12 shadow-2xl border border-gray-700"
             initial={{ opacity: 0, y: 20 }}
@@ -162,43 +180,36 @@ export default function ContactForm() {
                   className="w-full px-5 py-3 bg-black text-white placeholder-gray-400 rounded-xl border border-gray-700 focus:outline-none focus:ring-2 focus:ring-red-600 focus:border-red-600 shadow-inner transition-all duration-300 resize-none"
                 />
 
-                {/* Red button with glow on hover */}
+                {/* Submit Button */}
                 <div className="relative group">
                   <motion.button
                     type="submit"
                     disabled={isSubmitting}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className="w-full px-8 py-4 bg-linear-to-r from-red-600 to-red-700 text-white font-bold rounded-xl shadow-lg transition-all duration-300 disabled:opacity-70 flex items-center justify-center gap-3 relative overflow-hidden"
+                    className="w-full px-8 py-4 bg-red-600 text-white font-bold rounded-xl shadow-lg flex items-center justify-center gap-3 relative overflow-hidden transition-all duration-300 disabled:opacity-70 cursor-pointer"
                   >
-                    {/* Inner glow on hover */}
-                    <div className="absolute inset-0 bg-linear-to-r from-red-500 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    <span className="relative z-10">
-                      {isSubmitting ? (
-                        <div className="flex items-center justify-center gap-3">
-                          <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                          Sending...
-                        </div>
-                      ) : (
-                        <>
-                          Send Message
-                          <PaperAirplaneIcon className="w-5 h-5 inline ml-2" />
-                        </>
-                      )}
-                    </span>
+                    {isSubmitting ? (
+                      <div className="flex items-center justify-center gap-3">
+                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        Sending...
+                      </div>
+                    ) : (
+                      <>
+                        Send Message
+                        <PaperAirplaneIcon className="w-5 h-5 inline ml-2" />
+                      </>
+                    )}
                   </motion.button>
-                  
-                  {/* Outer red glow effect on hover */}
-                  <div className="absolute -inset-1 bg-linear-to-r from-red-500 to-red-600 rounded-xl blur opacity-0 group-hover:opacity-50 transition-opacity duration-500 -z-10 group-hover:scale-105 group-hover:blur-xl"></div>
                 </div>
               </form>
             )}
 
-            {/* Additional info */}
             <div className="mt-8 text-center">
               <p className="text-sm text-gray-400">
                 For urgent inquiries, call us at{" "}
-                <span className="text-red-400 font-semibold">+971 4 287 1395</span> / <span className="text-red-400 font-semibold">+971 4 287 1395</span>
+                <span className="text-red-400 font-semibold">+971 4 287 1395</span> /{" "}
+                <span className="text-red-400 font-semibold">+971 54 599 9795</span>
               </p>
             </div>
           </motion.div>

@@ -34,13 +34,6 @@ body {
   font-weight: bold;
 }
 
-/* Increase arrow size */
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 28px !important;
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  color: red !important;
+.swiper-pagination-bullet-active {
+  background-color: red !important;
 }

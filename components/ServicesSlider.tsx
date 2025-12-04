@@ -4,107 +4,151 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 import "swiper/css";
-import "swiper/css/navigation";
-// import "./services-slider.css"; // red arrow styling
+import "swiper/css/pagination";
 
 const slides = [
   {
     title: "Interior Fit Out Works",
     description: "Complete interior solutions to transform your space.",
-    image: "/images/services/fit-out.png"
+    image: "/images/services/interior-fit-Outs.png",
   },
   {
     title: "Air Conditioning",
     description: "Professional AC installation, service & repairs.",
-    image: "/images/services/air-conditioning.png"
+    image: "/images/services/ac.png",
   },
   {
     title: "Electrical Works",
     description: "Electrical maintenance, wiring & troubleshooting.",
-    image: "/images/services/electrical.png"
+    image: "/images/services/Electrical.png",
   },
   {
     title: "Partitions & False Ceiling Works",
     description: "Quality partitions & ceiling designs for all spaces.",
-    image: "/images/services/partitions.png"
+    image: "/images/services/Partitions.png",
   },
   {
     title: "Painting & Carpentry",
     description: "Professional painting and custom carpentry services.",
-    image: "/images/services/painting.png"
+    image: "/images/services/Painting.png",
   },
   {
     title: "Handyman Services",
     description: "Reliable multi-skill handyman services for home & office.",
-    image: "/images/services/handy.png"
-  }
+    image: "/images/services/Handyman.png",
+  },
 ];
 
 export default function ServicesSlider() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false, margin: "-100px" });
+  const isInView = useInView(ref, { once: false, margin: "-70px" });
 
   return (
-    <motion.div
+    <motion.section
       ref={ref}
-      className="w-full py-20 px-6 relative bg-white" // 👈 WHITE BG
-      animate={{ color: isInView ? "#000000" : "#333333" }} // 👈 text stays dark
-      transition={{ duration: 0.5 }}
+      className="w-full py-24 px-6 bg-white text-center"
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.7 }}
     >
-      <h2 className="text-3xl font-bold text-center mb-10">
-  Dubai’s <span className="text-red-600">Professional Technical Team</span>
-</h2>
+      {/* HEADING */}
+      <div className="w-full flex flex-col items-center justify-center text-center mb-14">
+        <h2 className="text-4xl md:text-5xl font-bold text-black">
+          Dubai’s <span className="text-red-600">Professional Technical Team</span>
+        </h2>
 
-      <p className="text-center mb-12 opacity-80 max-w-xl mx-auto">
-        Experience seamless maintenance for your home & offices with our expert staff.
-      </p>
+        <p className="text-gray-600 mt-4 max-w-2xl text-lg md:text-xl">
+          Experience seamless maintenance for your home & offices with our expert staff.
+        </p>
+      </div>
 
+      {/* SLIDER */}
       <Swiper
-  modules={[Navigation, Autoplay]}
-  navigation
-  autoplay={{ delay: 3500, disableOnInteraction: false }} // 👈 SLOW SLIDE CHANGE
-  speed={1200} // 👈 SLOW & SMOOTH TRANSITION
-  loop={true}
-  spaceBetween={40}
-  slidesPerView={1}
-  className="max-w-3xl mx-auto"
->
-
+        modules={[Autoplay, Pagination]}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop={true}
+        speed={900}
+        slidesPerView={1}
+        pagination={{
+          clickable: true,
+          renderBullet: (index, className) =>
+            `<span class="${className} w-3 h-3 rounded-full bg-red-600 opacity-70"></span>`,
+        }}
+        className="max-w-4xl mx-auto"
+      >
         {slides.map((s, index) => (
           <SwiperSlide key={index}>
             <motion.div
-  className="text-center p-8 bg-white rounded-2xl shadow-md border"
->
-  <div className="w-full h-64 relative mb-6">
-    <Image
-      src={s.image}
-      alt={s.title}
-      fill
-      className="object-cover rounded-xl"
-      sizes="100%"
-      priority={index === 0} // first image loads fast
-    />
-  </div>
+              className="
+                bg-white 
+                rounded-3xl 
+                shadow-xl 
+                border 
+                border-gray-100 
+                p-8 
+                md:p-10 
+                max-w-3xl 
+                mx-auto 
+                hover:shadow-2xl 
+                hover:-translate-y-1
+                transition-all 
+                duration-500
+              "
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            >
+              {/* IMAGE */}
+              <div className="relative w-full h-72 md:h-80 rounded-xl overflow-hidden shadow-md group">
+                <Image
+                  src={s.image}
+                  alt={s.title}
+                  fill
+                  sizes="100%"
+                  className="
+                    object-cover
+                    object-center
+                    transition-all 
+                    duration-500 
+                    group-hover:scale-105
+                  "
+                />
+              </div>
 
-  <h3 className="text-2xl font-semibold mb-3 text-black">{s.title}</h3>
-  <p className="text-lg text-gray-700">{s.description}</p>
-</motion.div>
+              {/* TITLE */}
+              <h3 className="text-2xl font-bold mt-6 text-black">
+                {s.title}
+              </h3>
 
+              {/* DESCRIPTION */}
+              <p className="text-gray-700 text-lg mt-2">{s.description}</p>
+            </motion.div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      <div className="text-center mt-10">
+      {/* CTA */}
+      <div className="text-center mt-12">
         <a
-          href="tel:+971XXXXXXXXX"
-          className="bg-red-600 text-white px-8 py-3 rounded-full font-semibold shadow-md hover:bg-red-700 transition"
+          href="tel:+971545999795"
+          className="
+            bg-red-600 
+            text-white 
+            px-10 
+            py-3 
+            rounded-full 
+            font-semibold 
+            shadow-lg 
+            hover:bg-red-700 
+            transition
+          "
         >
           Need Assistance? Call Our Experts
         </a>
       </div>
-    </motion.div>
+    </motion.section>
   );
 }
