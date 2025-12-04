@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Paintbrush, Ruler, Wrench } from "lucide-react";
 import { useState } from "react";
+// import { thead } from "framer-motion/client";
 
 export default function FitOutPage() {
   const fadeUp = {
@@ -214,7 +215,7 @@ export default function FitOutPage() {
               w-full bg-black text-white px-12 py-4 rounded-full font-bold 
               text-lg tracking-wide
               hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,0,0,0.6)] 
-              transition duration-300
+              transition duration-300 cursor-pointer
             "
           >
             Send Message
