@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Head from "next/head";
 import { CheckCircle, PhoneCall, ShieldCheck, Users, Wrench } from "lucide-react";
 
 export default function AboutUs() {
@@ -12,8 +13,21 @@ export default function AboutUs() {
 
   return (
     <div className="w-full bg-black text-white">
+      {/* SEO HEAD */}
+      <Head>
+        <title>About Gulf Fixit | Expert MEP Services in Dubai</title>
+        <meta
+          name="description"
+          content="Gulf Fixit provides expert mechanical, electrical, and plumbing (MEP) design, installation, and maintenance services in Dubai."
+        />
+        <link rel="canonical" href="https://www.gulffixit.com/about-us" />
+      </Head>
+
       {/* HERO SECTION */}
-      <section className="relative w-full h-[70vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: "url('/images/about/about.png')" }}>
+      <section
+        className="relative w-full h-[70vh] flex items-center justify-center bg-cover bg-center"
+        style={{ backgroundImage: "url('/images/about/about.png')" }}
+      >
         <div className="absolute inset-0 bg-black/70" />
         <motion.div initial="hidden" animate="visible" variants={fadeUp} className="relative z-10 text-center max-w-4xl px-6">
           <h1 className="text-4xl md:text-6xl font-bold text-red-600">Gulf Fixit</h1>
@@ -39,7 +53,13 @@ export default function AboutUs() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }}>
-          <Image src="/images/about/about-section.png" alt="MEP Team" width={600} height={450} className="rounded-2xl shadow-xl border border-white/10" />
+          <Image
+            src="/images/about/about-section.png"
+            alt="Gulf Fixit MEP Team working on installation"
+            width={600}
+            height={450}
+            className="rounded-2xl shadow-xl border border-white/10"
+          />
         </motion.div>
       </section>
 
@@ -69,26 +89,28 @@ export default function AboutUs() {
         </motion.h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-          {[{
-            icon: <Users className="w-12 h-12 text-red-600" />,
-            title: "Expertise Across Sectors",
-            desc: "Experienced in all types of MEP services for residential, commercial and large-scale projects.",
-          },
-          {
-            icon: <ShieldCheck className="w-12 h-12 text-red-600" />,
-            title: "Commitment to Quality & Safety",
-            desc: "We follow strict safety standards ensuring long-term performance and reliability.",
-          },
-          {
-            icon: <CheckCircle className="w-12 h-12 text-red-600" />,
-            title: "Customer-Centric Approach",
-            desc: "We prioritize customer satisfaction and deliver solutions with long-term value.",
-          },
-          {
-            icon: <Wrench className="w-12 h-12 text-red-600" />,
-            title: "24/7 Maintenance Support",
-            desc: "Round-the-clock service ensuring your space operates efficiently without disruptions.",
-          }].map((item, i) => (
+          {[
+            {
+              icon: <Users className="w-12 h-12 text-red-600" />,
+              title: "Expertise Across Sectors",
+              desc: "Experienced in all types of MEP services for residential, commercial and large-scale projects.",
+            },
+            {
+              icon: <ShieldCheck className="w-12 h-12 text-red-600" />,
+              title: "Commitment to Quality & Safety",
+              desc: "We follow strict safety standards ensuring long-term performance and reliability.",
+            },
+            {
+              icon: <CheckCircle className="w-12 h-12 text-red-600" />,
+              title: "Customer-Centric Approach",
+              desc: "We prioritize customer satisfaction and deliver solutions with long-term value.",
+            },
+            {
+              icon: <Wrench className="w-12 h-12 text-red-600" />,
+              title: "24/7 Maintenance Support",
+              desc: "Round-the-clock service ensuring your space operates efficiently without disruptions.",
+            },
+          ].map((item, i) => (
             <motion.div key={i} initial="hidden" whileInView="visible" variants={fadeUp} className="bg-white text-black p-8 rounded-2xl shadow-xl border border-gray-200">
               <div className="mb-4">{item.icon}</div>
               <h4 className="text-xl font-bold mb-2 text-red-600">{item.title}</h4>
@@ -103,7 +125,13 @@ export default function AboutUs() {
         <motion.h2 initial="hidden" animate="visible" variants={fadeUp} className="text-3xl md:text-4xl font-bold mb-4">
           Need Assistance? Call Our Experts
         </motion.h2>
-        <motion.a href="tel:+971545999795" initial="hidden" animate="visible" variants={fadeUp} className="inline-flex items-center gap-3 bg-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white hover:text-black transition">
+        <motion.a
+          href="tel:+971545999795"
+          initial="hidden"
+          animate="visible"
+          variants={fadeUp}
+          className="inline-flex items-center gap-3 bg-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white hover:text-black transition"
+        >
           <PhoneCall className="w-6 h-6" />
           +971 54 599 9795
         </motion.a>
