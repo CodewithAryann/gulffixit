@@ -208,10 +208,16 @@ export default function ContactForm() {
             <div className="mt-8 text-center">
               <p className="text-sm text-gray-400">
                 For urgent inquiries, call us at{" "}
-                <span className="text-red-400 font-semibold">+971 4 287 1395</span> /{" "}
-                <span className="text-red-400 font-semibold">+971 54 599 9795</span>
+                <a href="tel:+97148823427" className="text-red-400 font-semibold hover:underline">
+                  +971 4 8823 427
+                </a>{" "}
+                /{" "}
+                <a href="tel:+971545999795" className="text-red-400 font-semibold hover:underline">
+                  +971 54 599 9795
+                </a>
               </p>
             </div>
+
           </motion.div>
         </div>
       </div>

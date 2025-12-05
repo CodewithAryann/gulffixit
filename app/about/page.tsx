@@ -122,20 +122,40 @@ export default function AboutUs() {
 
       {/* CTA */}
       <section className="py-20 bg-red-600 text-center text-white">
-        <motion.h2 initial="hidden" animate="visible" variants={fadeUp} className="text-3xl md:text-4xl font-bold mb-4">
-          Need Assistance? Call Our Experts
-        </motion.h2>
-        <motion.a
-          href="tel:+971545999795"
+        <motion.h2
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="inline-flex items-center gap-3 bg-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white hover:text-black transition"
+          className="text-3xl md:text-4xl font-bold mb-8"
         >
-          <PhoneCall className="w-6 h-6" />
-          +971 54 599 9795
-        </motion.a>
+          Need Assistance? Call Our Experts
+        </motion.h2>
+
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <motion.a
+            href="tel:+971545999795"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="inline-flex items-center justify-center gap-3 bg-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white hover:text-black transition"
+          >
+            <PhoneCall className="w-6 h-6" />
+            +971 54 599 9795
+          </motion.a>
+
+          <motion.a
+            href="tel:+97148823427"
+            initial="hidden"
+            animate="visible"
+            variants={fadeUp}
+            className="inline-flex items-center justify-center gap-3 bg-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white hover:text-black transition"
+          >
+            <PhoneCall className="w-6 h-6" />
+            +971 4 8823 427
+          </motion.a>
+        </div>
       </section>
+
     </div>
   );
 }

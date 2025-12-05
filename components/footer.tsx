@@ -105,17 +105,22 @@ export default function Footer() {
           <div>
             <h3 className="text-white text-lg font-semibold mb-4">Get In Touch</h3>
             <p className="text-gray-400 mb-3">For any requirements or inquiries reach us anytime.</p>
+
             <p className="text-gray-300 mb-2">
               <span className="font-semibold text-white">Call / WhatsApp:</span>
               <br />
               <a href="tel:+971545999795" className="hover:text-red-500 transition">+971 54 599 9795</a>
+              <br />
+              <a href="tel:+97148823427" className="hover:text-red-500 transition">+971 4 8823 427</a> {/* New number */}
             </p>
+
             <p className="text-gray-300">
               <span className="font-semibold text-white">Email:</span>
               <br />
               <a href="mailto:help@gulffixit.com" className="hover:text-red-500 transition">help@gulffixit.com</a>
             </p>
           </div>
+
         </div>
 
         {/* Mobile Accordion */}
@@ -133,16 +138,16 @@ export default function Footer() {
               We’re a trusted provider of professional technical services tailored to meet clients’ requirements anytime & anywhere in Dubai.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
+              <a href="https://www.facebook.com/people/Gulf-Duqors/pfbid0QasK6SD33JAcL2uhqwXceLVGSoY6n1NfSCY4mS9DLmANyXY3iqPHUCSdrsE5CjCrl/" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaFacebookF className="text-white w-4 h-4" />
               </a>
-              <a href="#" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
+              <a href="https://www.instagram.com/gulffixit1/?next=%2F" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaInstagram className="text-white w-4 h-4" />
               </a>
               <a href="#" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaTiktok className="text-white w-4 h-4" />
               </a>
-              <a href="#" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
+              <a href="https://www.linkedin.com/company/gulffixit/" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaLinkedinIn className="text-white w-4 h-4" />
               </a>
             </div>
@@ -153,10 +158,13 @@ export default function Footer() {
             { title: "Quick Links", items: quickLinks },
             { title: "Services", items: servicesLinks },
             {
-              title: "Get In Touch", items: [
+              title: "Get In Touch",
+              items: [
                 { label: "Call / WhatsApp: +971 54 599 9795", href: "tel:+971545999795" },
+                { label: "Call: +971 4 8823 427", href: "tel:+97148823427" },
                 { label: "Email: help@gulffixit.com", href: "mailto:help@gulffixit.com" }
               ]
+
             }
           ].map((section, i) => (
             <div key={i} className="border-t border-white/10">

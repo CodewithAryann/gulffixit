@@ -161,29 +161,41 @@ export default function ServicesPage() {
         </section>
 
         {/* CTA */}
-        <section className="py-20 bg-red-600 text-white text-center">
+        <section className="py-20 bg-red-600 text-center text-white">
           <motion.h2
             initial="hidden"
-            whileInView="visible"
+            animate="visible"
             variants={fadeUp}
-            className="text-3xl md:text-4xl font-bold mb-4"
+            className="text-3xl md:text-4xl font-bold mb-8"
           >
-            Need Assistance?
+            Need Assistance? Call Our Experts
           </motion.h2>
-          <motion.a
-            href="tel:+971545999795"
-            className="inline-flex items-center gap-3 bg-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white hover:text-black transition"
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeUp}
-          >
-            <PhoneCall className="w-6 h-6" /> +971 54 599 9795
-          </motion.a>
-          <p className="mt-4 max-w-2xl mx-auto text-white/90">
-            Need help with repairs, installations or complete upgrades? Contact our experts for
-            immediate assistance or request a quote.
-          </p>
+
+          <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <motion.a
+              href="tel:+971545999795"
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
+              className="inline-flex items-center justify-center gap-3 bg-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white hover:text-black transition"
+            >
+              <PhoneCall className="w-6 h-6" />
+              +971 54 599 9795
+            </motion.a>
+
+            <motion.a
+              href="tel:+97148823427"
+              initial="hidden"
+              animate="visible"
+              variants={fadeUp}
+              className="inline-flex items-center justify-center gap-3 bg-black px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-white hover:text-black transition"
+            >
+              <PhoneCall className="w-6 h-6" />
+              +971 4 8823 427
+            </motion.a>
+          </div>
         </section>
+
       </div>
     </>
   );
