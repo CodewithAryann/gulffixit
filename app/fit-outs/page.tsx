@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Paintbrush, Ruler, Wrench } from "lucide-react";
 import Head from "next/head";
-import ContactForm from "@/components/contactform"; // adjust path
+import ContactForm from "@/components/contactform";
 
 export default function FitOutPage() {
   const fadeUp = {
