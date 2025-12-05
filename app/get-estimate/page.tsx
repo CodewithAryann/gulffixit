@@ -3,7 +3,9 @@
 import { motion } from "framer-motion";
 import { Phone, Mail, Clock, Facebook, Instagram, Linkedin } from "lucide-react";
 import Head from "next/head";
-
+import {
+  PiTiktokLogo,
+} from "react-icons/pi";
 export default function ContactPage() {
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -101,21 +103,41 @@ export default function ContactPage() {
                 Gulf Fixit For Technical Services Contracting LLC. Contact us for professional MEP services for residential or commercial buildings.
               </p>
               <div className="space-y-4 text-gray-700">
-                <p className="flex items-center gap-3"><Phone className="text-red-500" /> +971 54 599 9795 / +971 56 889 9338</p>
-                <p className="flex items-center gap-3"><Mail className="text-red-500" /> help@gulffixit.com</p>
-                <p className="flex items-center gap-3"><Clock className="text-red-500" /> 8.00am – 6.00pm (Mon – Sat) • 24/7 Emergency</p>
+                <p className="flex items-center gap-3">
+                  <Phone className="text-red-500" /> 
+                  <a href="tel:+971545999795" className="hover:text-red-600 transition">+971 54 599 9795</a> / 
+                  <a href="tel:+97148823427" className="hover:text-red-600 transition">+971 4 8823 427</a>
+                </p>
+                <p className="flex items-center gap-3">
+                  <Mail className="text-red-500" /> 
+                  <a href="mailto:help@gulffixit.com" className="hover:text-red-600 transition">help@gulffixit.com</a>
+                </p>
+                <p className="flex items-center gap-3">
+                  <Clock className="text-red-500" /> 8.00am – 6.00pm (Mon – Sat) • 24/7 Emergency
+                </p>
               </div>
             </motion.div>
 
             {/* SOCIAL */}
-            <motion.div variants={fadeUp} custom={2} className="bg-white rounded-3xl p-8 border border-gray-200 shadow-xl flex flex-col gap-4">
-              <h3 className="text-2xl font-bold text-red-500 mb-4">We&apos;re on Social</h3>
-              <div className="flex gap-6 text-gray-700 text-2xl">
-                <Facebook aria-label="Facebook" className="cursor-pointer hover:text-red-500 transition" />
-                <Instagram aria-label="Instagram" className="cursor-pointer hover:text-red-500 transition" />
-                <Linkedin aria-label="LinkedIn" className="cursor-pointer hover:text-red-500 transition" />
-              </div>
-            </motion.div>
+            {/* SOCIAL */}
+<motion.div variants={fadeUp} custom={2} className="bg-white rounded-3xl p-8 border border-gray-200 shadow-xl flex flex-col gap-4">
+  <h3 className="text-2xl font-bold text-red-500 mb-4">We&apos;re on Social</h3>
+  <div className="flex gap-6 text-gray-700 text-2xl">
+    <a href="https://www.facebook.com/gulffixit" target="_blank" rel="noopener noreferrer">
+      <Facebook className="cursor-pointer hover:text-red-500 transition" />
+    </a>
+    <a href="https://www.instagram.com/gulffixit" target="_blank" rel="noopener noreferrer">
+      <Instagram className="cursor-pointer hover:text-red-500 transition" />
+    </a>
+    <a href="https://www.linkedin.com/company/gulffixit" target="_blank" rel="noopener noreferrer">
+      <Linkedin className="cursor-pointer hover:text-red-500 transition" />
+    </a>
+    <a href="https://www.tiktok.com/@gulffixit" target="_blank" rel="noopener noreferrer">
+      <PiTiktokLogo className="cursor-pointer hover:text-red-500 transition" />
+    </a>
+  </div>
+</motion.div>
+
 
             {/* MAINTENANCE INFO */}
             <motion.div variants={fadeUp} custom={3} className="bg-white rounded-3xl p-8 border border-gray-200 shadow-xl group hover:shadow-red-500/30 transition-all duration-500">

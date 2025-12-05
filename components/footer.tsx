@@ -62,16 +62,16 @@ export default function Footer() {
             </p>
 
             <div className="flex items-center gap-4 mt-6">
-              <a href="#" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
+              <a href="https://www.facebook.com/people/Gulf-Duqors/pfbid0QasK6SD33JAcL2uhqwXceLVGSoY6n1NfSCY4mS9DLmANyXY3iqPHUCSdrsE5CjCrl/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaFacebookF className="text-white w-4 h-4" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
+              <a href="https://www.instagram.com/gulffixit1/?next=%2F" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaInstagram className="text-white w-4 h-4" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
+              <a href="https://www.tiktok.com/@gulffixit?utm_campaign=tt4d_open_api&utm_source=7111606065669619714&refer=player_v1&referrer_url=https%3A%2F%2Fwww.tiktok.com%2Fplayer%2Fv1%2F7578968585012251915%3Fmusic_info%3D1%26description%3D1%26autoplay%3D1%26loop%3D1%26utm_campaign%3Dtt4d_open_api%26utm_source%3D7111606065669619714&referer_video_id=7578968585012251915" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaTiktok className="text-white w-4 h-4" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
+              <a href="https://www.linkedin.com/company/gulffixit/" target="_blank" rel="noopener noreferrer" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaLinkedinIn className="text-white w-4 h-4" />
               </a>
             </div>
@@ -144,7 +144,7 @@ export default function Footer() {
               <a href="https://www.instagram.com/gulffixit1/?next=%2F" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaInstagram className="text-white w-4 h-4" />
               </a>
-              <a href="#" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
+              <a href="https://www.tiktok.com/@gulffixit?utm_campaign=tt4d_open_api&utm_source=7111606065669619714&refer=player_v1&referrer_url=https%3A%2F%2Fwww.tiktok.com%2Fplayer%2Fv1%2F7578968585012251915%3Fmusic_info%3D1%26description%3D1%26autoplay%3D1%26loop%3D1%26utm_campaign%3Dtt4d_open_api%26utm_source%3D7111606065669619714&referer_video_id=7578968585012251915" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">
                 <FaTiktok className="text-white w-4 h-4" />
               </a>
               <a href="https://www.linkedin.com/company/gulffixit/" className="p-2 rounded-full bg-red-600 hover:bg-red-700 transition">

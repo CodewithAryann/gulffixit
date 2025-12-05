@@ -42,7 +42,7 @@ export default function PartitionsCeilingPage() {
           name="description"
           content="Gulf Fixit offers professional partitions and false ceiling installation services in Dubai, creating functional and modern interiors."
         />
-        <link rel="canonical" href="https://www.gulffixit.com/partitions-false-ceilings" />
+        <link rel="canonical" href="https://www.gulffixit.com/partitions-ceilings" />
       </Head>
 
       <div className="w-full bg-black text-white overflow-hidden">

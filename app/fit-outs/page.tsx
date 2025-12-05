@@ -24,7 +24,7 @@ export default function FitOutPage() {
           name="description"
           content="Gulf Fixit provides professional fit-out, renovation, and interior design services in Dubai. Transform your spaces with expert solutions."
         />
-        <link rel="canonical" href="https://www.gulffixit.com/fit-out" />
+        <link rel="canonical" href="https://www.gulffixit.com/fit-outs" />
       </Head>
 
       <div className="w-full bg-black text-white overflow-hidden">
