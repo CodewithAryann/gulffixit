@@ -28,14 +28,14 @@ export default function Footer() {
   ];
 
   const servicesLinks = [
-    { label: "Interior Fit-Outs", href: "/services#interior-fitouts" },
-    { label: "Painting & Carpentry", href: "/services#painting-carpentry" },
-    { label: "Air Conditioning", href: "/services#ac" },
-    { label: "Electrical Works", href: "/services#electrical" },
-    { label: "Plumbing Works", href: "/services#plumbing" },
-    { label: "Plaster & Tiling Works", href: "/services#plaster-tiling" },
-    { label: "Partitions & False Ceiling Works", href: "/services#partitions-ceilings" },
-    { label: "Handyman Services", href: "/services#handyman" },
+    { label: "Interior Fit-Outs", href: "/fit-outs" },
+    { label: "Painting & Carpentry", href: "/painting-carpentry" },
+    { label: "Air Conditioning", href: "/air-conditioning" },
+    { label: "Electrical Works", href: "/electrical-works" },
+    { label: "Plumbing Works", href: "/plumbing-works" },
+    { label: "Plaster & Tiling Works", href: "/plaster-tiling" },
+    { label: "Partitions & False Ceiling Works", href: "/partitions-ceilings" },
+    { label: "Handyman Services", href: "/handyman-services" },
   ];
 
   type FooterLink = {

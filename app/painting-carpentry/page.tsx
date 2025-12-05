@@ -3,8 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Paintbrush, Hammer, Wrench } from "lucide-react";
-import { useState } from "react";
 import Head from "next/head";
+import ContactForm from "@/components/contactform"; // Import the white-themed ContactForm
 
 export default function PaintingCarpentryPage() {
   const fadeUp = {
@@ -15,21 +15,6 @@ export default function PaintingCarpentryPage() {
       transition: { delay: i * 0.2 },
     }),
   };
-
-  const [formStatus, setFormStatus] = useState<null | "success" | "error">(null);
-
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (res.ok) setFormStatus("success");
-    else setFormStatus("error");
-  }
 
   return (
     <>
@@ -152,76 +137,8 @@ export default function PaintingCarpentryPage() {
         </section>
 
         {/* CONTACT FORM */}
-        <section className="py-20 bg-white text-black relative overflow-hidden px-4">
-          <motion.h2
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-3xl md:text-4xl font-bold text-center mb-4"
-          >
-            Contact Us
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-center text-gray-700 max-w-2xl mx-auto mb-10 text-base md:text-lg"
-          >
-            Reach out for painting or carpentry services — our expert team will assist you promptly.
-          </motion.p>
-
-          <motion.form
-            onSubmit={handleSubmit}
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
-            className="max-w-3xl mx-auto bg-white/70 p-6 md:p-10 rounded-3xl shadow-[0_0_50px_rgba(0,0,0,0.1)] backdrop-blur-xl border border-gray-300"
-          >
-            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
-
-            <div className="grid md:grid-cols-2 gap-5 mb-6">
-              <input
-                required
-                name="name"
-                placeholder="Your Name"
-                aria-label="Your Name"
-                className="p-4 rounded-xl bg-gray-100 focus:bg-white border border-gray-300 focus:border-black outline-none transition"
-              />
-              <input
-                required
-                name="email"
-                placeholder="Your Email"
-                aria-label="Your Email"
-                className="p-4 rounded-xl bg-gray-100 focus:bg-white border border-gray-300 focus:border-black outline-none transition"
-              />
-            </div>
-
-            <textarea
-              required
-              name="message"
-              placeholder="Your Message / Requirements"
-              aria-label="Your Message"
-              className="w-full p-4 rounded-xl bg-gray-100 focus:bg-white border border-gray-300 focus:border-black outline-none transition h-40 mb-6"
-            />
-
-            <button
-              className="w-full bg-black text-white px-12 py-4 rounded-full font-bold text-lg tracking-wide hover:bg-red-600 hover:shadow-[0_0_20px_rgba(255,0,0,0.6)] transition duration-300 cursor-pointer"
-            >
-              Send Message
-            </button>
-
-            {formStatus === "success" && (
-              <p className="mt-4 text-green-600 text-center font-semibold">
-                Message sent successfully!
-              </p>
-            )}
-            {formStatus === "error" && (
-              <p className="mt-4 text-red-600 text-center font-semibold">
-                Something went wrong. Try again.
-              </p>
-            )}
-          </motion.form>
+        <section className="py-20 bg-gray-50 relative overflow-hidden">
+          <ContactForm />
         </section>
       </div>
     </>
