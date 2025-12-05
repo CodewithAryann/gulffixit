@@ -24,24 +24,26 @@ export default function Hero() {
 
   return (
     <section className="relative w-full h-[90vh] overflow-hidden">
-      {/* Background Slideshow (no animation) */}
-      {images.map((img, i) =>
-        i === index ? (
-          <div
-            key={i}
-            className="absolute inset-0 w-full h-full"
-          >
-            <Image
-              src={img}
-              alt={`Hero image ${i + 1}`}
-              fill
-              priority={i === 0}
-              className="object-cover object-center w-full h-full"
-            />
-            <div className="absolute inset-0 bg-black/40 backdrop-blur-[0.5px]"></div>
-          </div>
-        ) : null
-      )}
+
+      {/* Background Slideshow WITH FADE ANIMATION */}
+      {images.map((img, i) => (
+        <div
+          key={i}
+          className={`
+            absolute inset-0 w-full h-full transition-opacity duration-1500 ease-out
+            ${i === index ? "opacity-100" : "opacity-0"}
+          `}
+        >
+          <Image
+            src={img}
+            alt={`Hero image ${i + 1}`}
+            fill
+            priority={i === 0}
+            className="object-cover object-center w-full h-full"
+          />
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[0.5px]"></div>
+        </div>
+      ))}
 
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl mx-auto px-6 text-left">
@@ -59,7 +61,6 @@ export default function Hero() {
           </span>
         </p>
 
-        {/* EXACT SAME BUTTON — unchanged */}
         <div>
           <Link
             href="/get-estimate"

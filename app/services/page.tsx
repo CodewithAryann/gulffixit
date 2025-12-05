@@ -37,7 +37,7 @@ export default function ServicesPage() {
       icon: <Paintbrush className="w-12 h-12 text-red-600" />,
       title: "Painting & Carpentry",
       desc: "Professional painting and carpentry solutions delivering flawless finishing and premium-grade custom woodwork.",
-      image: "/images/services/Painting.png",
+      image: "/images/services/Painting-1.png",
     },
     {
       icon: <Fan className="w-12 h-12 text-red-600" />,
@@ -49,7 +49,7 @@ export default function ServicesPage() {
       icon: <Plug className="w-12 h-12 text-red-600" />,
       title: "Electrical Works",
       desc: "Certified electrical services from wiring to lighting installations for safe and efficient operations.",
-      image: "/images/services/Electrical.png",
+      image: "/images/services/electrical-1.png",
     },
     {
       icon: <ShowerHead className="w-12 h-12 text-red-600" />,
@@ -67,7 +67,7 @@ export default function ServicesPage() {
       icon: <Layers className="w-12 h-12 text-red-600" />,
       title: "Partitions & False Ceilings",
       desc: "Expertly designed and installed partitions and false ceilings for residential, commercial and industrial spaces.",
-      image: "/images/services/Partitions.png",
+      image: "/images/services/Partitions-1.png",
     },
     {
       icon: <Layers className="w-12 h-12 text-red-600" />,

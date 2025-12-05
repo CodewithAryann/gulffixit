@@ -23,17 +23,17 @@ const slides = [
   {
     title: "Electrical Works",
     description: "Electrical maintenance, wiring & troubleshooting.",
-    image: "/images/services/Electrical.png",
+    image: "/images/services/electrical-1.png",
   },
   {
     title: "Partitions & False Ceiling Works",
     description: "Quality partitions & ceiling designs for all spaces.",
-    image: "/images/services/Partitions.png",
+    image: "/images/services/Partitions-1.png",
   },
   {
     title: "Painting & Carpentry",
     description: "Professional painting and custom carpentry services.",
-    image: "/images/services/Painting.png",
+    image: "/images/services/Painting-1.png",
   },
   {
     title: "Handyman Services",
