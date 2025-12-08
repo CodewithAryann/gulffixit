@@ -42,7 +42,7 @@ export default function ServicesPage() {
       icon: <Paintbrush className="w-12 h-12 text-red-600" />,
       title: "Painting & Carpentry",
       desc: "Professional painting and carpentry solutions delivering flawless finishing and premium-grade custom woodwork.",
-      image: "/images/slider/painting-1.png",
+      image: "/images/painting/painting-1.png",
     },
     {
       icon: <Fan className="w-12 h-12 text-red-600" />,
