@@ -8,7 +8,6 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [openExpertise, setOpenExpertise] = useState(false);
 
-  // Expertise links with their corresponding pages
   const expertiseLinks = [
     { label: "Interior Fit-Outs", href: "/fit-outs" },
     { label: "Painting & Carpentry", href: "/painting-carpentry" },
@@ -21,8 +20,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.6)]">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.6)] backface-hidden">
+      <div className="max-w-7xl mx-auto px-6 py-4 min-h-16 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -107,21 +106,18 @@ export default function Navbar() {
         ${open ? "max-h-[900px] opacity-100 py-4" : "max-h-0 opacity-0 py-0"}`}
       >
         <div className="px-6 space-y-4 text-white font-medium">
-          {[
-            ["Home", "/"],
-            ["About", "/about"],
-            ["Services", "/services"],
-            ["What’s New", "/whats-new"],
-          ].map(([label, url]) => (
-            <Link
-              key={url}
-              href={url}
-              className="block hover:text-red-600 transition"
-              onClick={() => setOpen(false)}
-            >
-              {label}
-            </Link>
-          ))}
+          {[["Home", "/"], ["About", "/about"], ["Services", "/services"], ["What’s New", "/whats-new"]].map(
+            ([label, url]) => (
+              <Link
+                key={url}
+                href={url}
+                className="block hover:text-red-600 transition"
+                onClick={() => setOpen(false)}
+              >
+                {label}
+              </Link>
+            )
+          )}
 
           {/* Our Expertise Accordion */}
           <div>
