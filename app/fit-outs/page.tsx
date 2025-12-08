@@ -91,7 +91,7 @@ export default function FitOutPage() {
             className="flex justify-center"
           >
             <Image
-              src="/images/fit-out.png"
+              src="/images/fit-out/fit-out.png"
               width={600}
               height={450}
               alt="Gulf Fixit fit-out project example"
