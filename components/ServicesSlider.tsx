@@ -18,12 +18,12 @@ const slides = [
   {
     title: "Air Conditioning",
     description: "Professional AC installation, service & repairs.",
-    image: "/images/services/ac.png",
+    image: "/images/slider/ac.png",
   },
   {
     title: "Electrical Works",
     description: "Electrical maintenance, wiring & troubleshooting.",
-    image: "/images/services/electrical-1.png",
+    image: "/images/slider/electrical-1.png",
   },
   {
     title: "Partitions & False Ceiling Works",
@@ -33,12 +33,12 @@ const slides = [
   {
     title: "Painting & Carpentry",
     description: "Professional painting and custom carpentry services.",
-    image: "/images/services/Painting-1.png",
+    image: "/images/slider/Painting-1.png",
   },
   {
     title: "Handyman Services",
     description: "Reliable multi-skill handyman services for home & office.",
-    image: "/images/services/Handyman.png",
+    image: "/images/slider/handyman.png",
   },
 ];
 
@@ -101,8 +101,8 @@ export default function ServicesSlider() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
             >
-              {/* IMAGE */}
-              <div className="relative w-full h-72 md:h-80 rounded-xl overflow-hidden shadow-md group">
+              {/* IMAGE — FIXED (No white frame, no cropping issues) */}
+              <div className="relative w-full h-80 md:h-96 rounded-xl overflow-hidden shadow-md group">
                 <Image
                   src={s.image}
                   alt={s.title}
@@ -119,9 +119,7 @@ export default function ServicesSlider() {
               </div>
 
               {/* TITLE */}
-              <h3 className="text-2xl font-bold mt-6 text-black">
-                {s.title}
-              </h3>
+              <h3 className="text-2xl font-bold mt-6 text-black">{s.title}</h3>
 
               {/* DESCRIPTION */}
               <p className="text-gray-700 text-lg mt-2">{s.description}</p>

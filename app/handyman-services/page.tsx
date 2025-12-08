@@ -37,24 +37,38 @@ export default function HandymanServicesPage() {
       <div className="w-full bg-black text-white overflow-hidden">
         {/* HERO */}
         <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
-          className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden px-4"
-        >
-          <motion.div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/services/handyman.png')" }}
-            initial={{ scale: 1.2, opacity: 0.4 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 2, ease: "easeOut" }}
-          />
-          <div className="absolute inset-0 bg-black/70" />
-          <motion.div className="relative z-10 text-center max-w-3xl px-4" initial="hidden" animate="visible" variants={fadeUp}>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight">Handyman Services</h1>
-            <p className="mt-3 text-lg md:text-2xl text-gray-200 font-light">Fast & Reliable Repairs, Installations & Maintenance</p>
-          </motion.div>
-        </motion.section>
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 1.2 }}
+                  className="relative w-full min-h-dvh flex items-center justify-center overflow-hidden px-4"
+                >
+                  {/* Background Image */}
+                  <motion.div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: "url('/images/handyman/handyman.png')" }}
+                    initial={{ scale: 1.2, opacity: 0.4 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 2, ease: "easeOut" }}
+                  />
+        
+                  {/* Black Overlay */}
+                  <div className="absolute inset-0 bg-black/70" />
+        
+                  {/* Text */}
+                  <motion.div
+                    className="relative z-10 text-center max-w-3xl px-6"
+                    initial="hidden"
+                    animate="visible"
+                    variants={fadeUp}
+                  >
+                    <h1 className="text-[2.2rem] md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight">
+                      Handyman Services
+                    </h1>
+                    <p className="mt-4 text-base md:text-2xl text-gray-200 font-light">
+                      Fast & Reliable Repairs, Installations & Maintenance
+                    </p>
+                  </motion.div>
+                </motion.section>
 
         {/* ABOUT */}
         <section className="py-14 md:py-20 px-4 md:px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-16 items-center">
@@ -66,7 +80,7 @@ export default function HandymanServicesPage() {
           </motion.div>
 
           <motion.div initial={{ x: 80, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1 }} className="flex justify-center">
-            <Image src="/images/services/handyman.png" width={600} height={450} alt="Handyman Services by Gulf Fixit" className="rounded-2xl shadow-xl border border-white/10 hover:scale-105 transition duration-500 w-full max-w-[450px] md:max-w-full" />
+            <Image src="/images/slider/handyman.png" width={600} height={450} alt="Handyman Services by Gulf Fixit" className="rounded-2xl shadow-xl border border-white/10 hover:scale-105 transition duration-500 w-full max-w-[450px] md:max-w-full" />
           </motion.div>
         </section>
 

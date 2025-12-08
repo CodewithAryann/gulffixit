@@ -51,27 +51,31 @@ export default function PlasterTilingPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
-          className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden px-4"
+          className="relative w-full min-h-dvh flex items-center justify-center overflow-hidden px-4"
         >
+          {/* Background Image */}
           <motion.div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/services/plaster-tiling.png')" }}
+            style={{ backgroundImage: "url('/images/partitions/bg.png')" }}
             initial={{ scale: 1.2, opacity: 0.4 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
           />
+
+          {/* Black Overlay */}
           <div className="absolute inset-0 bg-black/70" />
 
+          {/* Text */}
           <motion.div
-            className="relative z-10 text-center max-w-3xl px-4"
+            className="relative z-10 text-center max-w-3xl px-6"
             initial="hidden"
             animate="visible"
             variants={fadeUp}
           >
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight">
+            <h1 className="text-[2.2rem] md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight">
               Plaster & Tiling Works
             </h1>
-            <p className="mt-3 text-lg md:text-2xl text-gray-200 font-light">
+            <p className="mt-4 text-base md:text-2xl text-gray-200 font-light">
               High-Quality Finishes for Walls & Floors
             </p>
           </motion.div>
@@ -101,7 +105,7 @@ export default function PlasterTilingPage() {
             className="flex justify-center"
           >
             <Image
-              src="/images/services/plaster-tiling.png"
+              src="/images/plaster/1.png"
               width={600}
               height={450}
               alt="Plaster & Tiling Works by Gulf Fixit"

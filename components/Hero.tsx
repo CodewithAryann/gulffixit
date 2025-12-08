@@ -48,7 +48,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center h-full max-w-6xl mx-auto px-6 text-left">
 
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight drop-shadow-2xl">
+        <h1 className="text-4xl md:text-5xl lg:text-[2.5rem] font-extrabold text-white leading-tight drop-shadow-2xl">
           Keeping Your Spaces <span className="text-red-600">Pristine</span>
           <br /> With Expert Maintenance Solutions
         </h1>

@@ -24,18 +24,31 @@ export default function AboutUs() {
       </Head>
 
       {/* HERO SECTION */}
-      <section
-        className="relative w-full h-[70vh] flex items-center justify-center bg-cover bg-center"
-        style={{ backgroundImage: "url('/images/about/about.png')" }}
-      >
-        <div className="absolute inset-0 bg-black/70" />
-        <motion.div initial="hidden" animate="visible" variants={fadeUp} className="relative z-10 text-center max-w-4xl px-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-red-600">Gulf Fixit</h1>
-          <p className="mt-4 text-xl md:text-2xl font-light text-gray-200">
-            Delivering Expert MEP Design, Installation & Maintenance Services
-          </p>
-        </motion.div>
-      </section>
+     <section
+  className="
+    relative w-full 
+    min-h-dvh  /* TRUE full height on all devices */
+    flex items-center justify-center 
+    bg-cover bg-center bg-no-repeat
+  "
+  style={{ backgroundImage: "url('/images/about/worker.png')" }}
+>
+  <div className="absolute inset-0 bg-black/70" />
+
+  <motion.div
+    initial="hidden"
+    animate="visible"
+    variants={fadeUp}
+    className="relative z-10 text-center max-w-4xl px-6"
+  >
+    <h1 className="text-4xl md:text-6xl font-bold text-red-600">Gulf Fixit</h1>
+
+    <p className="mt-4 text-xl md:text-2xl font-light text-gray-200">
+      Delivering Expert MEP Design, Installation & Maintenance Services
+    </p>
+  </motion.div>
+</section>
+
 
       {/* ABOUT SECTION */}
       <section className="py-20 px-6 max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">

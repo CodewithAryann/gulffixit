@@ -18,7 +18,11 @@ import Head from "next/head";
 export default function ServicesPage() {
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
-    visible: (i = 1) => ({ opacity: 1, y: 0, transition: { delay: i * 0.15 } }),
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.15 },
+    }),
   };
 
   const services = [
@@ -38,19 +42,19 @@ export default function ServicesPage() {
       icon: <Paintbrush className="w-12 h-12 text-red-600" />,
       title: "Painting & Carpentry",
       desc: "Professional painting and carpentry solutions delivering flawless finishing and premium-grade custom woodwork.",
-      image: "/images/services/Painting-1.png",
+      image: "/images/slider/painting-1.png",
     },
     {
       icon: <Fan className="w-12 h-12 text-red-600" />,
       title: "Air Conditioning",
       desc: "HVAC and air conditioning installation, repairs, and maintenance ensuring comfort and energy efficiency.",
-      image: "/images/services/ac.png",
+      image: "/images/slider/ac.png",
     },
     {
       icon: <Plug className="w-12 h-12 text-red-600" />,
       title: "Electrical Works",
       desc: "Certified electrical services from wiring to lighting installations for safe and efficient operations.",
-      image: "/images/services/electrical-1.png",
+      image: "/images/slider/electrical-1.png",
     },
     {
       icon: <ShowerHead className="w-12 h-12 text-red-600" />,
@@ -62,7 +66,7 @@ export default function ServicesPage() {
       icon: <Drill className="w-12 h-12 text-red-600" />,
       title: "Handyman Services",
       desc: "Fast and efficient handyman services for minor to major repairs, installations and maintenance tasks.",
-      image: "/images/services/Handyman.png",
+      image: "/images/slider/handyman.png",
     },
     {
       icon: <Layers className="w-12 h-12 text-red-600" />,
@@ -91,29 +95,43 @@ export default function ServicesPage() {
       </Head>
 
       <div className="w-full bg-black text-white">
-        {/* HERO SECTION */}
+
+        {/* ⭐ FIXED FULL-SCREEN HERO SECTION */}
         <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
-          className="relative w-full h-[60vh] flex items-center justify-center overflow-hidden"
+          className="
+            relative w-full 
+            min-h-dvh   /* FULL SCREEN FIX */
+            flex items-center justify-center 
+            overflow-hidden
+          "
         >
+          {/* Background Image */}
           <motion.div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/services/services-page.png')" }}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{
+              backgroundImage: "url('/images/services/services-page.png')",
+            }}
             initial={{ scale: 1.2, opacity: 0.4 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
           />
+
+          {/* Overlay */}
           <div className="absolute inset-0 bg-black/50" />
 
+          {/* Text */}
           <motion.div
             className="relative z-10 text-center max-w-3xl px-6"
             initial="hidden"
             animate="visible"
             variants={fadeUp}
           >
-            <h1 className="text-4xl md:text-6xl font-bold text-red-600">Our Services</h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-red-600">
+              Our Services
+            </h1>
             <p className="mt-4 text-lg md:text-xl text-gray-200">
               Professional MEP, Fit-Out, Renovation & Maintenance Services Across Dubai
             </p>
@@ -140,6 +158,7 @@ export default function ServicesPage() {
                 variants={fadeUp}
                 className="bg-white text-black rounded-2xl shadow-xl border border-gray-200 overflow-hidden group cursor-pointer"
               >
+                {/* Image */}
                 <div className="overflow-hidden">
                   <Image
                     src={s.image}
@@ -152,7 +171,9 @@ export default function ServicesPage() {
 
                 <div className="p-8">
                   <div className="mb-3">{s.icon}</div>
-                  <h3 className="text-xl font-bold text-red-600 mb-2">{s.title}</h3>
+                  <h3 className="text-xl font-bold text-red-600 mb-2">
+                    {s.title}
+                  </h3>
                   <p className="text-gray-700 leading-relaxed">{s.desc}</p>
                 </div>
               </motion.div>

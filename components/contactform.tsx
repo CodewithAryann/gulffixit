@@ -15,14 +15,14 @@ export default function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
 
   const services = [
-    "Electrical Services",
-    "Plumbing Services",
-    "HVAC Services",
-    "Fire Fighting Systems",
-    "Building Maintenance",
-    "Industrial MEP",
-    "Residential MEP",
-    "Commercial MEP",
+    "Interior Fit-Outs",
+    "Painting & Carpentry",
+    "Air Conditioning",
+    "Electrical Works",
+    "Plumbing Works",
+    "Plaster & Tiling Works",
+    "Partitions & False Ceiling Works",
+    "Handyman Services",
     "Other",
   ];
 
@@ -210,8 +210,8 @@ export default function ContactForm() {
             <div className="mt-8 text-center">
               <p className="text-sm text-gray-400">
                 For urgent inquiries, call us at{" "}
-                <a href="tel:+97148823427" className="text-red-400 font-semibold hover:underline">
-                  +971 4 8823 427
+                <a href="tel:+97143797288" className="text-red-400 font-semibold hover:underline">
+                  +971 4 3797 288
                 </a>{" "}
                 /{" "}
                 <a href="tel:+971545999795" className="text-red-400 font-semibold hover:underline">

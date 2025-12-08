@@ -33,28 +33,32 @@ export default function ElectricalWorksPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
-          className="relative w-full h-[60vh] md:h-[70vh] flex items-center justify-center overflow-hidden px-4"
+          className="relative w-full min-h-dvh flex items-center justify-center overflow-hidden px-4"
         >
+          {/* Background Image */}
           <motion.div
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/images/services/electrical-1.png')" }}
+            style={{ backgroundImage: "url('/images/slider/electrical-1.png')" }}
             initial={{ scale: 1.2, opacity: 0.4 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 2, ease: "easeOut" }}
           />
+
+          {/* Black Overlay */}
           <div className="absolute inset-0 bg-black/70" />
 
+          {/* Text */}
           <motion.div
-            className="relative z-10 text-center max-w-3xl px-4"
+            className="relative z-10 text-center max-w-3xl px-6"
             initial="hidden"
             animate="visible"
             variants={fadeUp}
           >
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight">
+            <h1 className="text-[2.2rem] md:text-5xl lg:text-6xl font-bold text-red-600 leading-tight">
               Electrical Works
             </h1>
-            <p className="mt-3 text-lg md:text-2xl text-gray-200 font-light">
-              Safe, Certified & Professional Electrical Services Across Dubai
+            <p className="mt-4 text-base md:text-2xl text-gray-200 font-light">
+              Safe, Certified & Professional Electrical Services Across UAE
             </p>
           </motion.div>
         </motion.section>
@@ -83,7 +87,7 @@ export default function ElectricalWorksPage() {
             className="flex justify-center"
           >
             <Image
-              src="/images/services/electrical-1.png"
+              src="/images/electrical/1.png"
               width={600}
               height={450}
               alt="Electrical Works by Gulf Fixit"

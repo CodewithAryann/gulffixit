@@ -111,7 +111,7 @@ export default function Footer() {
               <br />
               <a href="tel:+971545999795" className="hover:text-red-500 transition">+971 54 599 9795</a>
               <br />
-              <a href="tel:+97148823427" className="hover:text-red-500 transition">+971 4 8823 427</a> {/* New number */}
+              <a href="tel:+97143797288" className="hover:text-red-500 transition">+971 4 3797 288</a> {/* New number */}
             </p>
 
             <p className="text-gray-300">
@@ -161,7 +161,7 @@ export default function Footer() {
               title: "Get In Touch",
               items: [
                 { label: "Call / WhatsApp: +971 54 599 9795", href: "tel:+971545999795" },
-                { label: "Call: +971 4 8823 427", href: "tel:+97148823427" },
+                { label: "Call: +971 4 3797 288", href: "tel:+97143797288" },
                 { label: "Email: help@gulffixit.com", href: "mailto:help@gulffixit.com" }
               ]
 
@@ -200,8 +200,8 @@ export default function Footer() {
 
         {/* COPYRIGHT */}
         <div className="mt-14 border-t border-white/10 pt-6 text-center text-gray-500 text-sm">
-          © 2025 <span className="text-white font-semibold">Gulf Fixit</span>, All Rights Reserved —{" "}
-          <Link href="/privacy" className="text-red-500 hover:underline cursor-pointer">Privacy Policy</Link>
+          © 2025 <span className="text-white font-semibold">Gulf Fixit</span>, All Rights Reserved.
+          {/* <Link href="/privacy" className="text-red-500 hover:underline cursor-pointer">Privacy Policy</Link> */}
         </div>
       </div>
     </footer>
