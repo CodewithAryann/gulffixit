@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+// next.config.js
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    // Add the qualities you want to allow
+    qualities: [75, 90],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;

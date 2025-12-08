@@ -28,11 +28,12 @@ export default function AboutSection() {
           </p>
 
           <Link
-            href="/about"
-            className="inline-block mt-4 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 hover:scale-105 transition-all duration-300"
-          >
-            LEARN MORE
-          </Link>
+  href="/about"
+  className="inline-block mt-4 px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-lg hover:bg-red-700 hover:scale-105 transition-all duration-300"
+>
+  Learn more about Gulf Fixit services
+</Link>
+
         </motion.div>
 
         {/* Right: Contained Image with subtle animation */}
